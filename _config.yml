@@ -26,13 +26,12 @@ minima:
 paginate: 5
 paginate_path: "/page:num/"
 
-# Commentaires Giscus (basé sur GitHub Discussions)
-# Pour obtenir vos IDs, visitez https://giscus.app et suivez les instructions
+# Commentaires Giscus (GitHub Discussions)
 giscus:
   repo: "theorbot42/blog"
-  repo_id: "R_kgDORYW9pg"  # Obtenez ceci sur giscus.app
+  repo_id: "R_kgDONp9Aqg"  # Obtenez ceci sur giscus.app
   category: "General"
-  category_id: "DIC_kwDORYW9ps4ClEhx"  # Obtenez ceci sur giscus.app
+  category_id: "DIC_kwDONp9Aqs4ClEiF"  # Obtenez ceci sur giscus.app
   mapping: "pathname"
   strict: "0"
   reactions_enabled: "1"

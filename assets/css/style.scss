@@ -51,15 +51,17 @@ a {
   border-top: 1px solid #e8e8e8;
 }
 
-/* Ensure comments are responsive */
-.giscus, .giscus-frame {
-  width: 100%;
-  max-width: 100%;
+/* Add spacing before comments section */
+.post-content + .giscus-comments {
+  margin-top: 3em;
 }
 
-/* Dark mode support for Giscus */
-@media (prefers-color-scheme: dark) {
-  .giscus-comments {
-    border-top-color: #444;
-  }
+/* Ensure giscus iframe is responsive */
+.giscus, .giscus-frame {
+  width: 100% !important;
+}
+
+.giscus-frame {
+  border: none;
+  color-scheme: light;
 }
