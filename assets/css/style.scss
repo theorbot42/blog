@@ -41,136 +41,22 @@ a {
   }
 }
 
-/* Contact section styling */
-.contact-section {
+/* Giscus comments section styling */
+.giscus-comments {
   margin-top: 3em;
-  padding: 2.5em 2em;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  border-radius: 12px;
-  border-left: 5px solid #2a7ae2;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding-top: 2em;
+  border-top: 1px solid #e8e8e8;
 }
 
-.contact-content {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
+/* Ensure comments are responsive */
+.giscus, .giscus-frame {
+  width: 100%;
+  max-width: 100%;
 }
 
-.contact-title {
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-  color: #1a1a1a;
-  font-weight: 600;
-}
-
-.contact-message {
-  font-size: 1.1em;
-  margin-bottom: 1em;
-  color: #333;
-  font-weight: 500;
-}
-
-.contact-description {
-  font-size: 0.95em;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 1.5em;
-}
-
-.contact-actions {
-  margin: 2em 0;
-}
-
-.contact-button {
-  display: inline-block;
-  padding: 14px 32px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white !important;
-  text-decoration: none !important;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 1.05em;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-  
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-    text-decoration: none !important;
-  }
-  
-  &:active {
-    transform: translateY(0);
-  }
-}
-
-.contact-icon {
-  margin-right: 8px;
-  font-size: 1.2em;
-}
-
-.contact-email {
-  margin-top: 1.5em;
-  color: #666;
-  
-  a {
-    color: #2a7ae2;
-    font-weight: 500;
-    
-    &:hover {
-      color: #1e5bb8;
-      text-decoration: underline;
-    }
-  }
-}
-
-.contact-note {
-  margin-top: 1.5em;
-  color: #777;
-  font-style: italic;
-}
-
-/* Dark mode support */
+/* Dark mode support for Giscus */
 @media (prefers-color-scheme: dark) {
-  .contact-section {
-    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
-    border-left-color: #667eea;
-  }
-  
-  .contact-title {
-    color: #e2e8f0;
-  }
-  
-  .contact-message {
-    color: #cbd5e0;
-  }
-  
-  .contact-description {
-    color: #a0aec0;
-  }
-  
-  .contact-email,
-  .contact-note {
-    color: #a0aec0;
-  }
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .contact-section {
-    padding: 2em 1.5em;
-    margin-left: -1em;
-    margin-right: -1em;
-    border-radius: 0;
-  }
-  
-  .contact-title {
-    font-size: 1.3em;
-  }
-  
-  .contact-button {
-    padding: 12px 24px;
-    font-size: 1em;
+  .giscus-comments {
+    border-top-color: #444;
   }
 }

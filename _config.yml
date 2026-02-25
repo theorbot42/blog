@@ -26,11 +26,19 @@ minima:
 paginate: 5
 paginate_path: "/page:num/"
 
-# Section de contact
-contact:
-  email: theorbot42@gmail.com
-  message: "Une question ? Un commentaire sur cet article ? N'hésitez pas à me contacter !"
-  cta: "Écrivez-moi"
+# Commentaires Giscus (GitHub Discussions)
+giscus:
+  repo: "theorbot42/blog"
+  repo_id: "R_kgDORYW9pg"
+  category: "Announcements"
+  category_id: "DIC_kwDORYW9ps4Cf3aS"
+  mapping: "pathname"
+  strict: "0"
+  reactions_enabled: "1"
+  emit_metadata: "0"
+  input_position: "bottom"
+  theme: "preferred_color_scheme"
+  lang: "fr"
 comments: true
 
 # Exclure du traitement
@@ -43,7 +51,6 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - README.md
-  - GISCUS_SETUP.md
 
 # Valeurs par défaut du front matter
 defaults:
