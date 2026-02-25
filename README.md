@@ -13,7 +13,7 @@ Ceci est mon blog personnel où je partage des articles sur la technologie, la p
 - [Jekyll](https://jekyllrb.com/) - Générateur de site statique
 - [Minima](https://github.com/jekyll/minima) - Thème épuré et minimal
 - [GitHub Pages](https://pages.github.com/) - Hébergement gratuit
-- [Giscus](https://giscus.app/) - Système de commentaires basé sur GitHub Discussions
+- Contact par email - Simple et efficace
 
 ## Écrire de nouveaux articles
 
@@ -30,7 +30,7 @@ title: "Titre de votre article"
 date: AAAA-MM-JJ HH:MM:SS +0100
 categories: nom-categorie
 tags: [tag1, tag2]
-comments: true  # Active les commentaires Giscus (activé par défaut)
+comments: true  # Active la section contact (activé par défaut)
 ---
 ```
 
@@ -38,95 +38,48 @@ comments: true  # Active les commentaires Giscus (activé par défaut)
 5. Commitez et poussez vers GitHub
 6. Votre article sera en ligne en quelques minutes !
 
-## Configuration des commentaires Giscus
+## Section de contact
 
-Ce blog utilise Giscus pour gérer les commentaires via GitHub Discussions. Giscus est intégré à GitHub, gratuit et ne nécessite aucun compte externe !
+Ce blog utilise une approche simple et directe pour les interactions : **le contact par email**. 
 
-### Pourquoi Giscus ?
+### Pourquoi cette approche ?
 
-- ✅ **Intégration native GitHub** : Utilise GitHub Discussions
-- ✅ **Gratuit et open-source** : Aucun coût, aucune limitation
-- ✅ **Respect de la vie privée** : Pas de tracking publicitaire
-- ✅ **Réactions et threading** : Fonctionnalités modernes
-- ✅ **Authentification GitHub** : Sécurisé et simple
-- ✅ **Multilingue** : Support du français
+- ✅ **Fonctionne immédiatement** : Aucune configuration externe requise
+- ✅ **Simplicité** : Pas de compte à créer pour vos lecteurs
+- ✅ **Vie privée** : Pas de tracking, pas de cookies tiers
+- ✅ **Contrôle total** : Vous gérez vos échanges directement
+- ✅ **Universel** : Tout le monde a un email
+- ✅ **Personnel** : Conversations privées et de qualité
 
-### Prérequis
+### Comment ça fonctionne ?
 
-Les commentaires Giscus nécessitent :
-1. ✅ Un dépôt GitHub public
-2. ✅ GitHub Discussions activé sur le dépôt
-3. ✅ L'application Giscus installée ([giscus.app](https://giscus.app))
+Chaque article affiche une section de contact en bas avec :
+- Un message d'invitation personnalisé
+- Un bouton "Écrivez-moi" qui ouvre le client email
+- Le sujet pré-rempli avec le titre de l'article
+- Votre adresse email pour contact direct
 
-### Étape 1 : Activer GitHub Discussions
+### Configuration
 
-1. Allez dans les paramètres du dépôt : `https://github.com/theorbot42/blog/settings`
-2. Sous "Features", cochez **Discussions**
-3. Créez une catégorie "General" si elle n'existe pas déjà
-
-### Étape 2 : Obtenir les identifiants Giscus
-
-1. Rendez-vous sur [https://giscus.app](https://giscus.app)
-2. Entrez votre dépôt : `theorbot42/blog`
-3. Choisissez la catégorie : "General"
-4. Configurez les options selon vos préférences
-5. Copiez les valeurs de `data-repo-id` et `data-category-id`
-
-### Étape 3 : Mettre à jour la configuration
-
-Ouvrez `_config.yml` et mettez à jour la section Giscus avec vos identifiants :
+La section de contact est configurée dans `_config.yml` :
 
 ```yaml
-giscus:
-  repo: "theorbot42/blog"
-  repo_id: "VOTRE_REPO_ID_ICI"      # De giscus.app
-  category: "General"
-  category_id: "VOTRE_CATEGORY_ID_ICI"  # De giscus.app
-  mapping: "pathname"
-  strict: "0"
-  reactions_enabled: "1"
-  emit_metadata: "0"
-  input_position: "bottom"
-  theme: "preferred_color_scheme"
-  lang: "fr"
-  loading: "lazy"
+contact:
+  email: theorbot42@gmail.com
+  message: "Une question ? Un commentaire sur cet article ? N'hésitez pas à me contacter !"
+  cta: "Écrivez-moi"
 comments: true
 ```
 
-### Options de configuration
+### Personnalisation
 
-**mapping** : Comment lier les discussions aux pages
-- `pathname` (recommandé) : URL de la page
-- `url` : URL complète
-- `title` : Titre de la page
-- `og:title` : Titre Open Graph
+**Modifier le message** : Éditez `contact.message` dans `_config.yml`
 
-**theme** : Apparence des commentaires
-- `preferred_color_scheme` (recommandé) : S'adapte au thème du système
-- `light` : Thème clair
-- `dark` : Thème sombre
-- `transparent_dark` : Sombre transparent
+**Modifier le bouton** : Changez `contact.cta` dans `_config.yml`
 
-**reactions_enabled** : Active les réactions emoji (👍 ❤️ etc.)
+**Désactiver sur un article** : Ajoutez `comments: false` dans le front matter
 
-**input_position** : Position du champ de commentaire
-- `bottom` : En bas (recommandé)
-- `top` : En haut
-
-### Désactiver les commentaires
-
-**Sur un article spécifique** :
-```yaml
----
-comments: false
----
-```
-
-**Sur tout le blog** :
-Modifiez `_config.yml` :
-```yaml
-comments: false
-```
+**Désactiver globalement** : Mettez `comments: false` dans `_config.yml`
 
 ## Développement local
 
@@ -142,8 +95,6 @@ bundle exec jekyll serve
 # Visitez http://localhost:4000/blog/
 ```
 
-**Note** : Les commentaires Giscus ne s'affichent qu'en production (sur GitHub Pages), pas en développement local.
-
 ## Structure du projet
 
 ```
@@ -151,9 +102,9 @@ bundle exec jekyll serve
 ├── _config.yml          # Configuration du site
 ├── _posts/              # Les articles vont ici
 ├── _layouts/            # Layouts personnalisés
-│   └── post.html        # Layout pour les articles (avec Giscus)
+│   └── post.html        # Layout pour les articles (avec section contact)
 ├── _includes/           # Composants réutilisables
-│   └── giscus_comments.html  # Code d'intégration Giscus
+│   └── contact_section.html  # Section de contact
 ├── assets/              # CSS, JS, images
 │   └── css/
 │       └── style.scss   # Styles personnalisés
@@ -172,7 +123,7 @@ Modifiez `_config.yml` pour personnaliser :
 - Les informations de l'auteur
 - Les liens vers les réseaux sociaux
 - Les paramètres du thème
-- La configuration Giscus
+- La configuration de contact
 
 ### Thème
 
@@ -182,40 +133,61 @@ Ce blog utilise le thème [Minima](https://github.com/jekyll/minima). Vous pouve
 - Remplacer les includes en créant des fichiers dans `_includes/`
 - Ajouter du CSS personnalisé dans `assets/css/`
 
-## Gestion des commentaires
+### Personnaliser la section contact
 
-### Modération
+Le design de la section contact peut être modifié dans `assets/css/style.scss`. Actuellement, elle présente :
 
-Les commentaires Giscus apparaissent comme des discussions GitHub. Pour modérer :
+- 🎨 Un design moderne avec dégradé
+- 💫 Des animations au survol
+- 📱 Un design responsive
+- 🌓 Support du mode sombre
+- ✨ Des effets visuels élégants
 
-1. Allez dans l'onglet **Discussions** du dépôt
-2. Trouvez la discussion correspondant à l'article
-3. Modérez directement depuis GitHub (éditer, supprimer, verrouiller)
+## Avantages du contact par email
 
-### Notifications
+| Fonctionnalité | Email | Commentaires publics |
+|----------------|-------|---------------------|
+| Configuration | ✅ Aucune | ❌ Complexe |
+| Vie privée | ✅ Excellente | ⚠️ Variable |
+| Spam | ✅ Filtres email | ⚠️ Modération requise |
+| Qualité échanges | ✅ Conversations détaillées | ⚠️ Souvent courts |
+| Maintenance | ✅ Aucune | ❌ Modération continue |
+| Coût | ✅ Gratuit | ⚠️ Variable |
 
-Vous recevrez des notifications GitHub pour :
-- Nouveaux commentaires
-- Réponses aux discussions
-- Réactions aux commentaires
+## Gestion des contacts
 
-Configurez vos préférences dans les paramètres GitHub.
+### Organisez vos emails
+
+Pour gérer efficacement les emails de vos lecteurs :
+
+1. **Créez des filtres** dans votre client email
+   - Filtrez par sujet (titre de l'article)
+   - Créez des labels/dossiers par catégorie
+
+2. **Templates de réponse** : Préparez des réponses types pour les questions fréquentes
+
+3. **Temps de réponse** : Indiquez dans la section contact votre délai de réponse habituel
+
+### Éviter le spam
+
+- ✅ Utilisez un email dédié pour le blog
+- ✅ Activez les filtres anti-spam de votre fournisseur
+- ✅ Ne publiez jamais votre email en texte brut dans le HTML (utiliser `mailto:`)
 
 ## Déploiement
 
 Ce site se déploie automatiquement sur GitHub Pages lorsque vous poussez vers la branche `main`. Aucune configuration supplémentaire nécessaire !
 
-## Avantages de Giscus vs Disqus
+## Alternatives pour les commentaires
 
-| Fonctionnalité | Giscus | Disqus |
-|----------------|--------|--------|
-| Coût | Gratuit | Gratuit (avec pub) |
-| Vie privée | ✅ Excellent | ❌ Tracking |
-| Intégration GitHub | ✅ Native | ❌ Externe |
-| Open-source | ✅ Oui | ❌ Non |
-| Compte requis | GitHub | Disqus/Social |
-| Publicités | ❌ Aucune | ✅ Version gratuite |
-| Contrôle des données | ✅ Total | ❌ Limité |
+Si vous souhaitez ajouter des commentaires publics plus tard, plusieurs options existent :
+
+- **Giscus** : Basé sur GitHub Discussions (pour audience technique)
+- **Utterances** : Basé sur GitHub Issues (simple et léger)
+- **Disqus** : Service externe populaire (avec publicités)
+- **Staticman** : Commentaires dans Git (configuration avancée)
+
+Pour ce blog, j'ai choisi la simplicité du contact direct par email. C'est plus personnel et évite les problèmes de modération et de spam.
 
 ## Licence
 
@@ -225,8 +197,8 @@ Le contenu est © Theorbot. N'hésitez pas à vous inspirer de la structure du c
 
 - GitHub : [@theorbot42](https://github.com/theorbot42)
 - Blog : [https://theorbot42.github.io/blog/](https://theorbot42.github.io/blog/)
-- Email : theorbot42@gmail.com
+- Email : [theorbot42@gmail.com](mailto:theorbot42@gmail.com)
 
 ---
 
-Construit avec ❤️ en utilisant Jekyll et Giscus
+Construit avec ❤️ en utilisant Jekyll • Simple, rapide et sans complications
