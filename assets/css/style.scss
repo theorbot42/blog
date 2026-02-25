@@ -1,0 +1,45 @@
+---
+---
+
+@import "minima";
+
+/* Custom styles for your blog */
+
+/* You can add custom CSS here to override the theme */
+/* For example: */
+
+.site-header {
+  border-top: 5px solid #2a7ae2;
+}
+
+.post-title {
+  letter-spacing: -0.5px;
+}
+
+/* Improve code block styling */
+pre, code {
+  border-radius: 4px;
+}
+
+/* Add some custom styling for tags */
+.post-meta {
+  font-size: 14px;
+  color: #828282;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 1em 0;
+}
+
+/* Custom link colors */
+a {
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,56 @@
+# Site settings
+title: Theorbot's Blog
+author: Theorbot
+email: theorbot42@example.com
+description: >-
+  A personal blog about technology, coding, and interesting ideas.
+  Welcome to my corner of the internet!
+
+baseurl: "/blog"
+url: "https://theorbot42.github.io"
+
+# Build settings
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Minima theme settings
+minima:
+  date_format: "%b %-d, %Y"
+  skin: classic
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Theorbot"
+
+# Social links (optional - customize as needed)
+twitter_username: theorbot42
+github_username: theorbot42
+
+# Google Analytics (optional)
+# google_analytics: UA-XXXXXXXX-X
+
+# Timezone
+timezone: Europe/Paris
