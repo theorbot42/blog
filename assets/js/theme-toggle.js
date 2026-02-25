@@ -24,21 +24,6 @@
   function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem(THEME_KEY, theme);
-    
-    // Update Giscus theme if present
-    updateGiscusTheme(theme);
-  }
-
-  // Update Giscus theme dynamically
-  function updateGiscusTheme(theme) {
-    const giscusFrame = document.querySelector('iframe.giscus-frame');
-    if (giscusFrame) {
-      const giscusTheme = theme === DARK ? 'dark' : 'light';
-      giscusFrame.contentWindow.postMessage(
-        { giscus: { setConfig: { theme: giscusTheme } } },
-        'https://giscus.app'
-      );
-    }
   }
 
   // Toggle theme
@@ -106,34 +91,15 @@
     }
   }
 
-  // Wait for Giscus to load and set initial theme
-  function waitForGiscus() {
-    const checkGiscus = setInterval(function() {
-      const giscusFrame = document.querySelector('iframe.giscus-frame');
-      if (giscusFrame) {
-        clearInterval(checkGiscus);
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        updateGiscusTheme(currentTheme || getThemePreference());
-      }
-    }, 100);
-    
-    // Stop checking after 10 seconds
-    setTimeout(function() {
-      clearInterval(checkGiscus);
-    }, 10000);
-  }
-
   // Initialize everything when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       setupToggleButton();
       watchSystemTheme();
-      waitForGiscus();
     });
   } else {
     setupToggleButton();
     watchSystemTheme();
-    waitForGiscus();
   }
 
   // Initialize theme immediately to prevent FOUC
