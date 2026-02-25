@@ -1,18 +1,18 @@
 ---
 layout: home
-title: Home
+title: Accueil
 ---
 
-# Welcome to Theorbot's Blog
+# Bienvenue sur le Blog de Theorbot
 
-Hello! This is my personal blog where I share thoughts, tutorials, and insights about technology, programming, and other topics that interest me.
+Bonjour ! Ceci est mon blog personnel où je partage mes réflexions, tutoriels et idées sur la technologie, la programmation et d'autres sujets qui m'intéressent.
 
-## Recent Posts
+## Articles récents
 
-Browse through my latest articles below. I write about various topics including software development, best practices, and interesting technical challenges I've encountered.
+Parcourez mes derniers articles ci-dessous. J'écris sur divers sujets incluant le développement logiciel, les bonnes pratiques et les défis techniques intéressants que j'ai rencontrés.
 
-Feel free to explore and reach out if you have any questions or feedback!
+N'hésitez pas à explorer et à me contacter si vous avez des questions ou des remarques !
 
 ---
 
-*This blog is powered by Jekyll and hosted on GitHub Pages.*
+*Ce blog est propulsé par Jekyll et hébergé sur GitHub Pages.*

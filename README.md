@@ -1,101 +1,102 @@
-# Theorbot's Blog
+# Blog de Theorbot
 
-Personal blog powered by Jekyll and GitHub Pages.
+Blog personnel propulsé par Jekyll et GitHub Pages.
 
-🌐 **Live Site**: [https://theorbot42.github.io/blog/](https://theorbot42.github.io/blog/)
+🌐 **Site en ligne** : [https://theorbot42.github.io/blog/](https://theorbot42.github.io/blog/)
 
-## About
+## À propos
 
-This is my personal blog where I share articles about technology, programming, and other topics that interest me.
+Ceci est mon blog personnel où je partage des articles sur la technologie, la programmation et d'autres sujets qui m'intéressent.
 
-## Built With
+## Technologies utilisées
 
-- [Jekyll](https://jekyllrb.com/) - Static site generator
-- [Minima](https://github.com/jekyll/minima) - Clean and minimal theme
-- [GitHub Pages](https://pages.github.com/) - Free hosting
+- [Jekyll](https://jekyllrb.com/) - Générateur de site statique
+- [Minima](https://github.com/jekyll/minima) - Thème épuré et minimal
+- [GitHub Pages](https://pages.github.com/) - Hébergement gratuit
 
-## Writing New Posts
+## Écrire de nouveaux articles
 
-To add a new blog post:
+Pour créer un nouvel article de blog :
 
-1. Create a new file in the `_posts` directory
-2. Name it using the format: `YYYY-MM-DD-title-of-post.md`
-3. Add front matter at the top:
+1. Créez un nouveau fichier dans le répertoire `_posts`
+2. Nommez-le selon le format : `AAAA-MM-JJ-titre-de-l-article.md`
+3. Ajoutez le front matter en haut :
 
 ```yaml
 ---
 layout: post
-title: "Your Post Title"
-date: YYYY-MM-DD HH:MM:SS +0100
-categories: category-name
+title: "Titre de votre article"
+date: AAAA-MM-JJ HH:MM:SS +0100
+categories: nom-categorie
 tags: [tag1, tag2]
 ---
 ```
 
-4. Write your content in Markdown below the front matter
-5. Commit and push to GitHub
-6. Your post will be live in a few minutes!
+4. Rédigez votre contenu en Markdown sous le front matter
+5. Commitez et poussez vers GitHub
+6. Votre article sera en ligne en quelques minutes !
 
-## Local Development
+## Développement local
 
-To run this blog locally:
+Pour exécuter ce blog en local :
 
 ```bash
-# Install dependencies
+# Installer les dépendances
 bundle install
 
-# Serve the site locally
+# Lancer le serveur local
 bundle exec jekyll serve
 
-# Visit http://localhost:4000/blog/
+# Visitez http://localhost:4000/blog/
 ```
 
-## Structure
+## Structure du projet
 
 ```
 .
-├── _config.yml          # Site configuration
-├── _posts/              # Blog posts go here
-├── _layouts/            # Custom layouts (optional)
-├── _includes/           # Reusable components (optional)
+├── _config.yml          # Configuration du site
+├── _posts/              # Les articles vont ici
+├── _layouts/            # Layouts personnalisés (optionnel)
+├── _includes/           # Composants réutilisables (optionnel)
 ├── assets/              # CSS, JS, images
-├── about.md             # About page
-├── index.md             # Homepage
-├── Gemfile              # Ruby dependencies
-└── README.md            # This file
+├── about.md             # Page À propos
+├── index.md             # Page d'accueil
+├── Gemfile              # Dépendances Ruby
+└── README.md            # Ce fichier
 ```
 
-## Customization
+## Personnalisation
 
-### Site Settings
+### Paramètres du site
 
-Edit `_config.yml` to customize:
-- Site title and description
-- Author information
-- Social media links
-- Theme settings
+Modifiez `_config.yml` pour personnaliser :
+- Le titre et la description du site
+- Les informations de l'auteur
+- Les liens vers les réseaux sociaux
+- Les paramètres du thème
 
-### Theme
+### Thème
 
-This blog uses the [Minima](https://github.com/jekyll/minima) theme. You can:
-- Customize colors and styles
-- Override layouts by creating files in `_layouts/`
-- Override includes by creating files in `_includes/`
-- Add custom CSS in `assets/css/`
+Ce blog utilise le thème [Minima](https://github.com/jekyll/minima). Vous pouvez :
+- Personnaliser les couleurs et les styles
+- Remplacer les layouts en créant des fichiers dans `_layouts/`
+- Remplacer les includes en créant des fichiers dans `_includes/`
+- Ajouter du CSS personnalisé dans `assets/css/`
 
-## Deployment
+## Déploiement
 
-This site automatically deploys to GitHub Pages when you push to the `main` branch. No additional configuration needed!
+Ce site se déploie automatiquement sur GitHub Pages lorsque vous poussez vers la branche `main`. Aucune configuration supplémentaire nécessaire !
 
-## License
+## Licence
 
-Content is © Theorbot. Feel free to learn from the code structure.
+Le contenu est © Theorbot. N'hésitez pas à vous inspirer de la structure du code.
 
 ## Contact
 
-- GitHub: [@theorbot42](https://github.com/theorbot42)
-- Blog: [https://theorbot42.github.io/blog/](https://theorbot42.github.io/blog/)
+- GitHub : [@theorbot42](https://github.com/theorbot42)
+- Blog : [https://theorbot42.github.io/blog/](https://theorbot42.github.io/blog/)
+- Email : theorbot42@gmail.com
 
 ---
 
-Built with ❤️ using Jekyll
+Construit avec ❤️ en utilisant Jekyll

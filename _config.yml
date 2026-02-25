@@ -1,31 +1,32 @@
-# Site settings
-title: Theorbot's Blog
+# Paramètres du site
+title: Blog de Theorbot
 author: Theorbot
-email: theorbot42@example.com
+email: theorbot42@gmail.com
 description: >-
-  A personal blog about technology, coding, and interesting ideas.
-  Welcome to my corner of the internet!
+  Un blog personnel sur la technologie, le code et les idées qui m'intéressent.
+  Bienvenue dans mon coin d'internet !
 
 baseurl: "/blog"
 url: "https://theorbot42.github.io"
 
-# Build settings
+# Configuration de construction
 theme: minima
 markdown: kramdown
+lang: fr
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Minima theme settings
+# Paramètres du thème Minima
 minima:
-  date_format: "%b %-d, %Y"
+  date_format: "%-d %B %Y"
   skin: classic
 
 # Pagination
 paginate: 5
 paginate_path: "/page:num/"
 
-# Exclude from processing
+# Exclure du traitement
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -36,7 +37,7 @@ exclude:
   - vendor/ruby/
   - README.md
 
-# Default front matter
+# Valeurs par défaut du front matter
 defaults:
   - scope:
       path: ""
@@ -45,12 +46,12 @@ defaults:
       layout: "post"
       author: "Theorbot"
 
-# Social links (optional - customize as needed)
+# Liens sociaux (optionnel - à personnaliser selon vos besoins)
 twitter_username: theorbot42
 github_username: theorbot42
 
-# Google Analytics (optional)
+# Google Analytics (optionnel)
 # google_analytics: UA-XXXXXXXX-X
 
-# Timezone
+# Fuseau horaire
 timezone: Europe/Paris

@@ -1,37 +1,37 @@
 ---
 layout: page
-title: About
+title: À propos
 permalink: /about/
 ---
 
-# About Me
+# À propos de moi
 
-Hello! I'm Theorbot, and this is my personal blog.
+Bonjour ! Je suis Theorbot, et ceci est mon blog personnel.
 
-## What You'll Find Here
+## Ce que vous trouverez ici
 
-This blog is where I share:
+Ce blog est l'endroit où je partage :
 
-- **Technical tutorials** and guides
-- **Programming insights** and best practices
-- **Project updates** and showcases
-- **Thoughts and reflections** on technology and software development
+- **Des tutoriels techniques** et des guides
+- **Des connaissances en programmation** et bonnes pratiques
+- **Des mises à jour de projets** et des présentations
+- **Des réflexions** sur la technologie et le développement logiciel
 
-## Background
+## Mon parcours
 
-I'm passionate about technology, software development, and continuous learning. This blog is my space to document my journey, share knowledge, and connect with others in the tech community.
+Je suis passionné par la technologie, le développement logiciel et l'apprentissage continu. Ce blog est mon espace pour documenter mon parcours, partager mes connaissances et me connecter avec d'autres dans la communauté tech.
 
-## Get in Touch
+## Me contacter
 
-Feel free to reach out:
+N'hésitez pas à me contacter :
 
-- GitHub: [@theorbot42](https://github.com/theorbot42)
-- Email: theorbot42@example.com
+- GitHub : [@theorbot42](https://github.com/theorbot42)
+- Email : theorbot42@gmail.com
 
-## About This Site
+## À propos de ce site
 
-This blog is built with [Jekyll](https://jekyllrb.com/) and hosted on [GitHub Pages](https://pages.github.com/). The source code is available in the [repository](https://github.com/theorbot42/blog).
+Ce blog est construit avec [Jekyll](https://jekyllrb.com/) et hébergé sur [GitHub Pages](https://pages.github.com/). Le code source est disponible dans le [dépôt](https://github.com/theorbot42/blog).
 
 ---
 
-Thanks for visiting!
+Merci de votre visite !
