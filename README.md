@@ -1,8 +1,18 @@
 # Blog de Theorbot
 
-Blog personnel propulsé par Jekyll et GitHub Pages.
+Blog personnel propulsé par Jekyll et GitHub Pages avec mode sombre.
 
 🌐 **Site en ligne** : [https://theorbot42.github.io/blog/](https://theorbot42.github.io/blog/)
+
+## ✨ Fonctionnalités
+
+- ✅ **Mode sombre/clair** avec toggle interactif
+- ✅ Détection automatique des préférences système
+- ✅ Persistance du choix de l'utilisateur
+- ✅ Synchronisation avec Giscus
+- ✅ Transitions fluides
+- ✅ Design responsive
+- ✅ Commentaires via GitHub Discussions (Giscus)
 
 ## À propos
 
@@ -14,6 +24,82 @@ Ceci est mon blog personnel où je partage des articles sur la technologie, la p
 - [Minima](https://github.com/jekyll/minima) - Thème épuré et minimal
 - [GitHub Pages](https://pages.github.com/) - Hébergement gratuit
 - [Giscus](https://giscus.app/) - Système de commentaires basé sur GitHub Discussions
+- CSS Variables - Pour le mode sombre dynamique
+- JavaScript vanilla - Toggle de thème et persistance
+
+## Mode sombre
+
+### Fonctionnement
+
+Le blog dispose d'un mode sombre complet avec les caractéristiques suivantes :
+
+#### 🎨 **Détection automatique**
+- Détecte automatiquement la préférence système (`prefers-color-scheme`)
+- S'adapte aux changements de thème système en temps réel
+
+#### 💾 **Persistance**
+- Sauvegarde la préférence de l'utilisateur dans `localStorage`
+- Le choix persiste entre les sessions
+- Aucun flash de contenu non stylisé (FOUC)
+
+#### 🔄 **Toggle interactif**
+- Bouton circulaire en haut à droite du header
+- Icônes ☀️ (soleil) et 🌙 (lune) animées
+- Transitions fluides (0.3s)
+- Accessible au clavier et aux lecteurs d'écran
+
+#### 🎭 **Synchronisation Giscus**
+- Les commentaires Giscus s'adaptent automatiquement
+- Changement de thème en temps réel sans rechargement
+
+### Utilisation
+
+**Pour les visiteurs** :
+- Cliquez sur le bouton soleil/lune en haut à droite
+- Ou utilisez la touche `Enter` ou `Espace` quand le bouton est focus
+
+**Pour les développeurs** :
+- Les variables CSS sont dans `assets/css/style.scss`
+- La logique JavaScript est dans `assets/js/theme-toggle.js`
+- Le toggle est dans `_includes/theme-toggle.html`
+
+### Variables CSS
+
+```scss
+:root {
+  --bg-color: #ffffff;
+  --text-color: #2c3e50;
+  --accent-color: #3498db;
+  --border-color: #e1e8ed;
+  --header-bg: #f8f9fa;
+  --code-bg: #f6f8fa;
+  --link-color: #2980b9;
+  --link-hover: #1abc9c;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --accent-color: #64b5f6;
+  --border-color: #333333;
+  --header-bg: #2d2d2d;
+  --code-bg: #2d2d2d;
+  --link-color: #81c784;
+  --link-hover: #a5d6a7;
+}
+```
+
+### Personnalisation
+
+Pour modifier les couleurs du mode sombre, éditez les variables dans `assets/css/style.scss` :
+
+```scss
+[data-theme="dark"] {
+  --bg-color: votre-couleur;
+  --text-color: votre-couleur;
+  /* etc. */
+}
+```
 
 ## Écrire de nouveaux articles
 
@@ -40,11 +126,9 @@ comments: true  # Active les commentaires Giscus (activé par défaut)
 
 ## Configuration des commentaires Giscus
 
-Ce blog utilise **Giscus** pour gérer les commentaires via GitHub Discussions. Giscus est intégré à GitHub, gratuit, open-source et respecte la vie privée.
+Ce blog utilise **Giscus** pour gérer les commentaires via GitHub Discussions.
 
 ### ✅ Configuration actuelle
-
-Le blog est déjà configuré avec Giscus :
 
 ```yaml
 giscus:
@@ -61,64 +145,15 @@ giscus:
   lang: "fr"
 ```
 
-### Pourquoi Giscus ?
-
-- ✅ **Intégration native GitHub** : Utilise GitHub Discussions
-- ✅ **Gratuit et open-source** : Aucun coût, aucune limitation
-- ✅ **Respect de la vie privée** : Pas de tracking publicitaire
-- ✅ **Réactions et threading** : Fonctionnalités modernes
-- ✅ **Authentification GitHub** : Sécurisé et simple
-- ✅ **Multilingue** : Support du français
+**Note** : Le thème Giscus s'adapte automatiquement au mode sombre/clair du blog !
 
 ### Prérequis
 
-Les commentaires Giscus nécessitent :
-1. ✅ Un dépôt GitHub public
-2. ✅ GitHub Discussions activé sur le dépôt
-3. ✅ L'application Giscus installée ([https://github.com/apps/giscus](https://github.com/apps/giscus))
+1. ✅ GitHub Discussions activé sur le dépôt
+2. ✅ Application Giscus installée : [https://github.com/apps/giscus](https://github.com/apps/giscus)
+3. ✅ Catégorie "Announcements" créée
 
-### Comment installer l'application Giscus
-
-1. Allez sur [https://github.com/apps/giscus](https://github.com/apps/giscus)
-2. Cliquez sur **Install**
-3. Choisissez votre compte (theorbot42)
-4. Sélectionnez **Only select repositories**
-5. Choisissez le dépôt `theorbot42/blog`
-6. Cliquez sur **Install**
-
-### Comment activer GitHub Discussions
-
-Si ce n'est pas déjà fait :
-
-1. Allez dans les paramètres du dépôt : `https://github.com/theorbot42/blog/settings`
-2. Sous "Features", cochez **Discussions**
-3. Une catégorie "Announcements" doit exister (c'est celle configurée)
-
-### Comment obtenir vos propres identifiants
-
-Si vous voulez configurer Giscus sur un autre dépôt :
-
-1. Rendez-vous sur [https://giscus.app](https://giscus.app)
-2. Entrez votre dépôt : `username/repo`
-3. Choisissez une catégorie (ex: "Announcements" ou "General")
-4. Configurez les options selon vos préférences
-5. Copiez les valeurs de `data-repo-id` et `data-category-id`
-6. Mettez à jour `_config.yml`
-
-### Désactiver les commentaires
-
-**Sur un article spécifique** :
-```yaml
----
-comments: false
----
-```
-
-**Sur tout le blog** :
-Modifiez `_config.yml` :
-```yaml
-comments: false
-```
+Pour plus de détails, consultez [GISCUS_GUIDE.md](GISCUS_GUIDE.md).
 
 ## Développement local
 
@@ -134,99 +169,87 @@ bundle exec jekyll serve
 # Visitez http://localhost:4000/blog/
 ```
 
-**Note** : Les commentaires Giscus ne s'affichent qu'en production (sur GitHub Pages), pas en développement local.
+**Notes** :
+- Les commentaires Giscus ne s'affichent qu'en production
+- Le mode sombre fonctionne en local
+- Le toggle de thème est fonctionnel partout
 
 ## Structure du projet
 
 ```
 .
 ├── _config.yml          # Configuration du site
-├── _posts/              # Les articles vont ici
+├── _posts/              # Articles
 ├── _layouts/            # Layouts personnalisés
-│   └── post.html        # Layout pour les articles (avec Giscus)
+│   ├── default.html     # Layout principal
+│   ├── post.html        # Layout articles
+│   └── page.html        # Layout pages
 ├── _includes/           # Composants réutilisables
-│   └── giscus_comments.html  # Code d'intégration Giscus
-├── assets/              # CSS, JS, images
-│   └── css/
-│       └── style.scss   # Styles personnalisés
+│   ├── head.html        # Head HTML avec anti-FOUC
+│   ├── header.html      # Header avec toggle
+│   ├── footer.html      # Footer
+│   ├── theme-toggle.html # Bouton toggle
+│   └── giscus_comments.html  # Commentaires Giscus
+├── assets/
+│   ├── css/
+│   │   └── style.scss   # Styles avec mode sombre
+│   └── js/
+│       └── theme-toggle.js # Logique du toggle
 ├── about.md             # Page À propos
 ├── index.md             # Page d'accueil
 ├── Gemfile              # Dépendances Ruby
+├── GISCUS_GUIDE.md      # Guide Giscus
 └── README.md            # Ce fichier
 ```
 
 ## Personnalisation
 
-### Paramètres du site
+### Thème et couleurs
 
-Modifiez `_config.yml` pour personnaliser :
-- Le titre et la description du site
-- Les informations de l'auteur
-- Les liens vers les réseaux sociaux
-- Les paramètres du thème
-- La configuration Giscus
+Modifiez les variables CSS dans `assets/css/style.scss` pour personnaliser :
+- Couleurs du mode clair et sombre
+- Transitions et animations
+- Typographie
+- Espacements
 
-### Thème
+### Bouton de toggle
 
-Ce blog utilise le thème [Minima](https://github.com/jekyll/minima). Vous pouvez :
-- Personnaliser les couleurs et les styles
-- Remplacer les layouts en créant des fichiers dans `_layouts/`
-- Remplacer les includes en créant des fichiers dans `_includes/`
-- Ajouter du CSS personnalisé dans `assets/css/`
+Pour modifier l'apparence du bouton, éditez `.theme-toggle` dans `assets/css/style.scss`.
 
-## Gestion des commentaires
+### Comportement JavaScript
 
-### Modération
+Pour modifier le comportement du toggle, éditez `assets/js/theme-toggle.js`.
 
-Les commentaires Giscus apparaissent comme des discussions GitHub. Pour modérer :
+## Accessibilité
 
-1. Allez dans l'onglet **Discussions** du dépôt
-2. Trouvez la discussion correspondant à l'article
-3. Modérez directement depuis GitHub (éditer, supprimer, verrouiller)
+Le mode sombre est conçu pour être accessible :
 
-### Notifications
+- ✅ **Contraste** : Ratios de contraste WCAG AA respectés
+- ✅ **Clavier** : Navigation au clavier complète
+- ✅ **Lecteurs d'écran** : Labels ARIA appropriés
+- ✅ **Focus visible** : Indicateurs de focus clairs
+- ✅ **Pas de clignotement** : Animations douces
 
-Vous recevrez des notifications GitHub pour :
-- Nouveaux commentaires
-- Réponses aux discussions
-- Réactions aux commentaires
+## Navigateurs supportés
 
-Configurez vos préférences dans les paramètres GitHub.
+Le mode sombre fonctionne sur :
+- ✅ Chrome/Edge 76+
+- ✅ Firefox 67+
+- ✅ Safari 12.1+
+- ✅ Opera 63+
+
+Fallback gracieux pour les navigateurs plus anciens.
 
 ## Déploiement
 
-Ce site se déploie automatiquement sur GitHub Pages lorsque vous poussez vers la branche `main`. Aucune configuration supplémentaire nécessaire !
+Ce site se déploie automatiquement sur GitHub Pages lorsque vous poussez vers la branche `main`.
 
-## Avantages de Giscus
+## Performance
 
-| Fonctionnalité | Giscus | Autres solutions |
-|----------------|--------|------------------|
-| Coût | ✅ Gratuit | Variable |
-| Vie privée | ✅ Excellent | Variable |
-| Intégration GitHub | ✅ Native | ❌ Externe |
-| Open-source | ✅ Oui | Variable |
-| Publicités | ✅ Aucune | Souvent oui |
-| Compte requis | GitHub | Variable |
-| Contrôle des données | ✅ Total | Limité |
-| Réactions | ✅ Emoji GitHub | Variable |
-| Markdown | ✅ Support complet | Variable |
-
-## Dépannage
-
-### Les commentaires ne s'affichent pas
-
-Vérifiez que :
-- ✅ GitHub Discussions est activé sur le dépôt
-- ✅ L'application Giscus est installée sur le dépôt
-- ✅ Les identifiants dans `_config.yml` sont corrects
-- ✅ Le dépôt est public
-- ✅ Vous êtes en production (pas en local)
-
-### Obtenir de l'aide
-
-- Documentation Giscus : [https://github.com/giscus/giscus](https://github.com/giscus/giscus)
-- Configuration : [https://giscus.app](https://giscus.app)
-- Support : [https://github.com/giscus/giscus/discussions](https://github.com/giscus/giscus/discussions)
+- ⚡ Chargement instantané du thème (pas de FOUC)
+- ⚡ CSS Variables pour des changements ultra-rapides
+- ⚡ JavaScript vanilla (pas de dépendances)
+- ⚡ Transitions GPU-accélérées
 
 ## Licence
 
@@ -240,4 +263,4 @@ Le contenu est © Theorbot. N'hésitez pas à vous inspirer de la structure du c
 
 ---
 
-Construit avec ❤️ en utilisant Jekyll et Giscus
+Construit avec ❤️ en utilisant Jekyll, Giscus et CSS Variables • Mode sombre inclus 🌙
