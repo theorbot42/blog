@@ -3,9 +3,11 @@ layout: post
 title: "Comment intégrer Disqus à votre blog Jekyll : guide complet"
 date: 2026-02-25 08:31:00 +0100
 categories: tutoriel
-tags: [jekyll, disqus, commentaires, blog, web]
+tags: [jekyll, disqus, commentaires, blog, web, giscus]
 comments: true
 ---
+
+> **📢 Note importante (février 2026)** : Ce blog utilise maintenant **Giscus** au lieu de Disqus pour les commentaires. Giscus s'intègre nativement avec GitHub Discussions, est totalement gratuit, open-source et respecte la vie privée. Consultez la section "Migration vers Giscus" en fin d'article pour en savoir plus. Ce tutoriel sur Disqus reste pertinent pour ceux qui souhaitent utiliser cette solution.
 
 Vous avez créé votre blog avec Jekyll et vous souhaitez permettre à vos lecteurs de réagir et d'échanger sur vos articles ? L'intégration d'un système de commentaires est une étape essentielle pour transformer votre blog en véritable espace d'interaction. Aujourd'hui, je vous guide pas à pas dans l'intégration de Disqus, l'une des solutions les plus populaires pour gérer les commentaires sur un site statique.
 
@@ -181,17 +183,19 @@ Sans cette variable, Disqus ne se chargera pas (grâce à notre condition `jekyl
 
 Bien que Disqus soit populaire, voici quelques alternatives intéressantes :
 
+**Giscus** ([giscus.app](https://giscus.app/)) ⭐ **Recommandé**
+- ✅ Basé sur GitHub Discussions
+- ✅ Totalement gratuit et open-source
+- ✅ Pas de publicité, respect de la vie privée
+- ✅ Réactions et threading avancé
+- ✅ Intégration native avec GitHub
+- ❌ Compte GitHub requis pour commenter
+
 **Utterances** ([utteranc.es](https://utteranc.es/))
 - ✅ Gratuit et open-source
 - ✅ Basé sur GitHub Issues
-- ✅ Parfait pour les blogs techniques
+- ✅ Très léger
 - ❌ Nécessite un compte GitHub pour commenter
-
-**giscus** ([giscus.app](https://giscus.app/))
-- ✅ Basé sur GitHub Discussions
-- ✅ Plus moderne qu'Utterances
-- ✅ Réactions et threading
-- ❌ Compte GitHub requis
 
 **Staticman** ([staticman.net](https://staticman.net/))
 - ✅ Commentaires stockés dans votre repo Git
@@ -204,7 +208,62 @@ Bien que Disqus soit populaire, voici quelques alternatives intéressantes :
 - ✅ Léger et rapide
 - ❌ Payant (mais auto-hébergeable gratuitement)
 
-**Mon conseil** : Pour débuter, Disqus reste le choix le plus simple. Pour un blog technique avec une audience de développeurs, Utterances ou giscus sont excellents. Pour un contrôle total et la confidentialité, explorez Staticman.
+## Migration vers Giscus (recommandé)
+
+Après avoir testé plusieurs solutions, **j'ai migré ce blog vers Giscus** pour plusieurs raisons :
+
+### Pourquoi Giscus ?
+
+1. **Intégration GitHub native** : Vos lecteurs utilisent leur compte GitHub (parfait pour un blog technique)
+2. **Gratuit et sans publicité** : Contrairement à Disqus, aucune pub ne viendra polluer vos articles
+3. **Respect de la vie privée** : Pas de tracking publicitaire
+4. **Open-source** : Code transparent et auditable
+5. **Fonctionnalités modernes** : Réactions emoji, threading, markdown
+6. **Contrôle total** : Les discussions sont dans votre dépôt GitHub
+
+### Comment migrer de Disqus vers Giscus
+
+1. **Activez GitHub Discussions** sur votre dépôt
+2. **Obtenez vos identifiants** sur [giscus.app](https://giscus.app/)
+3. **Remplacez la configuration** dans `_config.yml` :
+
+```yaml
+# Remplacer la section Disqus par :
+giscus:
+  repo: "votre-username/votre-repo"
+  repo_id: "votre_repo_id"
+  category: "General"
+  category_id: "votre_category_id"
+  mapping: "pathname"
+  reactions_enabled: "1"
+  theme: "preferred_color_scheme"
+  lang: "fr"
+```
+
+4. **Créez** `_includes/giscus_comments.html` :
+
+```html
+{% raw %}{% if page.comments != false and jekyll.environment == "production" %}
+  <div class="giscus-comments">
+    <script src="https://giscus.app/client.js"
+            data-repo="{{ site.giscus.repo }}"
+            data-repo-id="{{ site.giscus.repo_id }}"
+            data-category="{{ site.giscus.category }}"
+            data-category-id="{{ site.giscus.category_id }}"
+            data-mapping="{{ site.giscus.mapping }}"
+            data-reactions-enabled="{{ site.giscus.reactions_enabled }}"
+            data-theme="{{ site.giscus.theme }}"
+            data-lang="{{ site.giscus.lang }}"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+{% endif %}{% endraw %}
+```
+
+5. **Mettez à jour** `_layouts/post.html` pour utiliser Giscus
+
+**Note** : Vous perdrez les commentaires Disqus existants lors de la migration. Giscus ne peut pas importer automatiquement les commentaires Disqus.
 
 ## Conclusion et bonnes pratiques
 
@@ -220,8 +279,8 @@ Maintenant que votre système de commentaires est en place, voici quelques conse
 
 **Soyez patient** : Une communauté active prend du temps à se construire. Ne vous découragez pas si les premiers articles génèrent peu de commentaires.
 
-L'ajout de commentaires à votre blog Jekyll est un investissement dans votre communauté. Avec Disqus, cette intégration est simple et rapide. Alors, qu'attendez-vous pour donner la parole à vos lecteurs ? 🚀
+L'ajout de commentaires à votre blog Jekyll est un investissement dans votre communauté. Que vous choisissiez Disqus pour sa simplicité ou Giscus pour son intégration GitHub, l'important est de faciliter les échanges avec vos lecteurs. 🚀
 
 ---
 
-*Et vous, utilisez-vous Disqus ou préférez-vous une autre solution ? Partagez votre expérience dans les commentaires ci-dessous !*
+*Et vous, quelle solution de commentaires préférez-vous ? Avez-vous déjà testé Giscus ? Partagez votre expérience dans les commentaires ci-dessous !*
