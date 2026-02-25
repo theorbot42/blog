@@ -40,37 +40,46 @@ comments: true  # Active les commentaires Giscus (activé par défaut)
 
 ## Configuration des commentaires Giscus
 
-Ce blog utilise **Giscus** pour gérer les commentaires via GitHub Discussions. Contrairement à Disqus, Giscus est :
-- ✅ **100% gratuit et open-source**
-- ✅ **Sans publicité**
-- ✅ **Respect de la vie privée**
-- ✅ **Intégré à GitHub** (pas de compte externe nécessaire)
-- ✅ **Markdown support** complet
-- ✅ **Réactions** avec emojis
+Ce blog utilise Giscus pour gérer les commentaires via GitHub Discussions. Giscus est intégré à GitHub, gratuit et ne nécessite aucun compte externe !
+
+### Pourquoi Giscus ?
+
+- ✅ **Intégration native GitHub** : Utilise GitHub Discussions
+- ✅ **Gratuit et open-source** : Aucun coût, aucune limitation
+- ✅ **Respect de la vie privée** : Pas de tracking publicitaire
+- ✅ **Réactions et threading** : Fonctionnalités modernes
+- ✅ **Authentification GitHub** : Sécurisé et simple
+- ✅ **Multilingue** : Support du français
+
+### Prérequis
+
+Les commentaires Giscus nécessitent :
+1. ✅ Un dépôt GitHub public
+2. ✅ GitHub Discussions activé sur le dépôt
+3. ✅ L'application Giscus installée ([giscus.app](https://giscus.app))
 
 ### Étape 1 : Activer GitHub Discussions
 
-1. Allez dans **Settings** du dépôt
-2. Descendez à la section **Features**
-3. Cochez **Discussions**
-4. Créez une catégorie "General" si elle n'existe pas
+1. Allez dans les paramètres du dépôt : `https://github.com/theorbot42/blog/settings`
+2. Sous "Features", cochez **Discussions**
+3. Créez une catégorie "General" si elle n'existe pas déjà
 
-### Étape 2 : Obtenir les IDs de configuration
+### Étape 2 : Obtenir les identifiants Giscus
 
-1. Visitez [https://giscus.app](https://giscus.app)
-2. Dans la section "Configuration", entrez : `theorbot42/blog`
-3. Sélectionnez la catégorie "General" (ou celle que vous avez créée)
-4. Copiez les valeurs de `data-repo-id` et `data-category-id` générées
+1. Rendez-vous sur [https://giscus.app](https://giscus.app)
+2. Entrez votre dépôt : `theorbot42/blog`
+3. Choisissez la catégorie : "General"
+4. Configurez les options selon vos préférences
+5. Copiez les valeurs de `data-repo-id` et `data-category-id`
 
 ### Étape 3 : Mettre à jour la configuration
 
-1. Ouvrez `_config.yml`
-2. Mettez à jour la section Giscus avec vos IDs :
+Ouvrez `_config.yml` et mettez à jour la section Giscus avec vos identifiants :
 
 ```yaml
 giscus:
   repo: "theorbot42/blog"
-  repo_id: "VOTRE_REPO_ID_ICI"  # De giscus.app
+  repo_id: "VOTRE_REPO_ID_ICI"      # De giscus.app
   category: "General"
   category_id: "VOTRE_CATEGORY_ID_ICI"  # De giscus.app
   mapping: "pathname"
@@ -84,31 +93,40 @@ giscus:
 comments: true
 ```
 
-3. Sauvegardez et poussez les modifications
+### Options de configuration
+
+**mapping** : Comment lier les discussions aux pages
+- `pathname` (recommandé) : URL de la page
+- `url` : URL complète
+- `title` : Titre de la page
+- `og:title` : Titre Open Graph
+
+**theme** : Apparence des commentaires
+- `preferred_color_scheme` (recommandé) : S'adapte au thème du système
+- `light` : Thème clair
+- `dark` : Thème sombre
+- `transparent_dark` : Sombre transparent
+
+**reactions_enabled** : Active les réactions emoji (👍 ❤️ etc.)
+
+**input_position** : Position du champ de commentaire
+- `bottom` : En bas (recommandé)
+- `top` : En haut
 
 ### Désactiver les commentaires
 
-Pour désactiver les commentaires sur un article spécifique :
+**Sur un article spécifique** :
+```yaml
+---
+comments: false
+---
+```
 
+**Sur tout le blog** :
+Modifiez `_config.yml` :
 ```yaml
 comments: false
 ```
-
-Pour désactiver tous les commentaires :
-
-```yaml
-comments: false  # Dans _config.yml
-```
-
-### Avantages de Giscus
-
-- **Pas de tracking** ou de cookies tiers
-- **Thème adapté** automatiquement (clair/sombre)
-- **Notifications GitHub** pour les réponses
-- **Modération native** via GitHub
-- **Markdown** et **code syntax highlighting**
-- **Réactions** avec emojis GitHub
-- **Totalement gratuit** sans limite
 
 ## Développement local
 
@@ -164,9 +182,40 @@ Ce blog utilise le thème [Minima](https://github.com/jekyll/minima). Vous pouve
 - Remplacer les includes en créant des fichiers dans `_includes/`
 - Ajouter du CSS personnalisé dans `assets/css/`
 
+## Gestion des commentaires
+
+### Modération
+
+Les commentaires Giscus apparaissent comme des discussions GitHub. Pour modérer :
+
+1. Allez dans l'onglet **Discussions** du dépôt
+2. Trouvez la discussion correspondant à l'article
+3. Modérez directement depuis GitHub (éditer, supprimer, verrouiller)
+
+### Notifications
+
+Vous recevrez des notifications GitHub pour :
+- Nouveaux commentaires
+- Réponses aux discussions
+- Réactions aux commentaires
+
+Configurez vos préférences dans les paramètres GitHub.
+
 ## Déploiement
 
 Ce site se déploie automatiquement sur GitHub Pages lorsque vous poussez vers la branche `main`. Aucune configuration supplémentaire nécessaire !
+
+## Avantages de Giscus vs Disqus
+
+| Fonctionnalité | Giscus | Disqus |
+|----------------|--------|--------|
+| Coût | Gratuit | Gratuit (avec pub) |
+| Vie privée | ✅ Excellent | ❌ Tracking |
+| Intégration GitHub | ✅ Native | ❌ Externe |
+| Open-source | ✅ Oui | ❌ Non |
+| Compte requis | GitHub | Disqus/Social |
+| Publicités | ❌ Aucune | ✅ Version gratuite |
+| Contrôle des données | ✅ Total | ❌ Limité |
 
 ## Licence
 
