@@ -1,0 +1,19 @@
+{% if page.comments != false and site.contact.enabled %}
+<div class="contact-section">
+  <hr class="contact-divider">
+  <div class="contact-content">
+    <h4 class="contact-heading">💬 Questions ou commentaires ?</h4>
+    <p class="contact-text">
+      Cet article vous a intéressé ? Vous avez des questions ou des remarques ? 
+      N'hésitez pas à me contacter directement par email.
+    </p>
+    <a href="mailto:{{ site.contact.email }}?subject=À propos de : {{ page.title | uri_escape }}" 
+       class="contact-button">
+      📧 Me contacter
+    </a>
+    <p class="contact-note">
+      <small>Je réponds généralement sous 24-48 heures.</small>
+    </p>
+  </div>
+</div>
+{% endif %}

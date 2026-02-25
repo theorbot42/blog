@@ -26,20 +26,10 @@ minima:
 paginate: 5
 paginate_path: "/page:num/"
 
-# Commentaires Giscus (GitHub Discussions)
-giscus:
-  repo: "theorbot42/blog"
-  repo_id: "R_kgDORYW9pg"
-  category: "Announcements"
-  category_id: "DIC_kwDORYW9ps4Cf3aS"
-  mapping: "pathname"
-  strict: "0"
-  reactions_enabled: "1"
-  emit_metadata: "0"
-  input_position: "bottom"
-  theme: "preferred_color_scheme"
-  lang: "fr"
-comments: true
+# Section de contact
+contact:
+  email: theorbot42@gmail.com
+  enabled: true
 
 # Exclure du traitement
 exclude:
