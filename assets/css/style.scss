@@ -44,19 +44,22 @@ a {
   }
 }
 
-/* Disqus comments section styling */
-#disqus_thread {
+/* Giscus comments section styling */
+.giscus-comments {
   margin-top: 3em;
   padding-top: 2em;
   border-top: 1px solid #e8e8e8;
 }
 
-/* Add spacing before comments section */
-.post-content + #disqus_thread {
-  margin-top: 3em;
+/* Ensure comments are responsive */
+.giscus, .giscus-frame {
+  width: 100%;
+  max-width: 100%;
 }
 
-/* Ensure comments are responsive */
-#disqus_thread iframe {
-  max-width: 100%;
+/* Dark mode support for Giscus */
+@media (prefers-color-scheme: dark) {
+  .giscus-comments {
+    border-top-color: #444;
+  }
 }

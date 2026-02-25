@@ -13,7 +13,7 @@ Ceci est mon blog personnel où je partage des articles sur la technologie, la p
 - [Jekyll](https://jekyllrb.com/) - Générateur de site statique
 - [Minima](https://github.com/jekyll/minima) - Thème épuré et minimal
 - [GitHub Pages](https://pages.github.com/) - Hébergement gratuit
-- [Disqus](https://disqus.com/) - Système de commentaires
+- [Giscus](https://giscus.app/) - Système de commentaires basé sur GitHub Discussions
 
 ## Écrire de nouveaux articles
 
@@ -30,7 +30,7 @@ title: "Titre de votre article"
 date: AAAA-MM-JJ HH:MM:SS +0100
 categories: nom-categorie
 tags: [tag1, tag2]
-comments: true  # Active les commentaires Disqus (activé par défaut)
+comments: true  # Active les commentaires Giscus (activé par défaut)
 ---
 ```
 
@@ -38,31 +38,49 @@ comments: true  # Active les commentaires Disqus (activé par défaut)
 5. Commitez et poussez vers GitHub
 6. Votre article sera en ligne en quelques minutes !
 
-## Configuration des commentaires Disqus
+## Configuration des commentaires Giscus
 
-Ce blog utilise Disqus pour gérer les commentaires. Pour configurer Disqus :
+Ce blog utilise **Giscus** pour gérer les commentaires via GitHub Discussions. Contrairement à Disqus, Giscus est :
+- ✅ **100% gratuit et open-source**
+- ✅ **Sans publicité**
+- ✅ **Respect de la vie privée**
+- ✅ **Intégré à GitHub** (pas de compte externe nécessaire)
+- ✅ **Markdown support** complet
+- ✅ **Réactions** avec emojis
 
-### Étape 1 : Créer un compte Disqus
+### Étape 1 : Activer GitHub Discussions
 
-1. Allez sur [https://disqus.com/](https://disqus.com/)
-2. Cliquez sur "Get Started"
-3. Sélectionnez "I want to install Disqus on my site"
-4. Créez votre site Disqus
+1. Allez dans **Settings** du dépôt
+2. Descendez à la section **Features**
+3. Cochez **Discussions**
+4. Créez une catégorie "General" si elle n'existe pas
 
-### Étape 2 : Obtenir votre shortname
+### Étape 2 : Obtenir les IDs de configuration
 
-1. Lors de la création, choisissez un **Website Name** unique (par exemple : `theorbot-blog`)
-2. Ce nom devient votre **shortname** Disqus
-3. Notez ce shortname
+1. Visitez [https://giscus.app](https://giscus.app)
+2. Dans la section "Configuration", entrez : `theorbot42/blog`
+3. Sélectionnez la catégorie "General" (ou celle que vous avez créée)
+4. Copiez les valeurs de `data-repo-id` et `data-category-id` générées
 
-### Étape 3 : Configurer le blog
+### Étape 3 : Mettre à jour la configuration
 
 1. Ouvrez `_config.yml`
-2. Modifiez la section Disqus :
+2. Mettez à jour la section Giscus avec vos IDs :
 
 ```yaml
-disqus:
-  shortname: votre-shortname-ici  # Remplacez par votre shortname
+giscus:
+  repo: "theorbot42/blog"
+  repo_id: "VOTRE_REPO_ID_ICI"  # De giscus.app
+  category: "General"
+  category_id: "VOTRE_CATEGORY_ID_ICI"  # De giscus.app
+  mapping: "pathname"
+  strict: "0"
+  reactions_enabled: "1"
+  emit_metadata: "0"
+  input_position: "bottom"
+  theme: "preferred_color_scheme"
+  lang: "fr"
+  loading: "lazy"
 comments: true
 ```
 
@@ -70,17 +88,27 @@ comments: true
 
 ### Désactiver les commentaires
 
-Pour désactiver les commentaires sur un article spécifique, ajoutez dans le front matter :
+Pour désactiver les commentaires sur un article spécifique :
 
 ```yaml
 comments: false
 ```
 
-Pour désactiver tous les commentaires sur le blog, modifiez `_config.yml` :
+Pour désactiver tous les commentaires :
 
 ```yaml
-comments: false
+comments: false  # Dans _config.yml
 ```
+
+### Avantages de Giscus
+
+- **Pas de tracking** ou de cookies tiers
+- **Thème adapté** automatiquement (clair/sombre)
+- **Notifications GitHub** pour les réponses
+- **Modération native** via GitHub
+- **Markdown** et **code syntax highlighting**
+- **Réactions** avec emojis GitHub
+- **Totalement gratuit** sans limite
 
 ## Développement local
 
@@ -96,7 +124,7 @@ bundle exec jekyll serve
 # Visitez http://localhost:4000/blog/
 ```
 
-**Note** : Les commentaires Disqus ne s'affichent qu'en production (sur GitHub Pages), pas en développement local.
+**Note** : Les commentaires Giscus ne s'affichent qu'en production (sur GitHub Pages), pas en développement local.
 
 ## Structure du projet
 
@@ -105,9 +133,9 @@ bundle exec jekyll serve
 ├── _config.yml          # Configuration du site
 ├── _posts/              # Les articles vont ici
 ├── _layouts/            # Layouts personnalisés
-│   └── post.html        # Layout pour les articles (avec Disqus)
+│   └── post.html        # Layout pour les articles (avec Giscus)
 ├── _includes/           # Composants réutilisables
-│   └── disqus_comments.html  # Code d'intégration Disqus
+│   └── giscus_comments.html  # Code d'intégration Giscus
 ├── assets/              # CSS, JS, images
 │   └── css/
 │       └── style.scss   # Styles personnalisés
@@ -126,7 +154,7 @@ Modifiez `_config.yml` pour personnaliser :
 - Les informations de l'auteur
 - Les liens vers les réseaux sociaux
 - Les paramètres du thème
-- La configuration Disqus
+- La configuration Giscus
 
 ### Thème
 
@@ -152,4 +180,4 @@ Le contenu est © Theorbot. N'hésitez pas à vous inspirer de la structure du c
 
 ---
 
-Construit avec ❤️ en utilisant Jekyll
+Construit avec ❤️ en utilisant Jekyll et Giscus
