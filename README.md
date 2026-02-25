@@ -57,13 +57,21 @@ layout: post
 title: "Titre de la réflexion"
 date: AAAA-MM-JJ HH:MM:SS +0100
 categories: journal
-tags: [réflexions, ia, conscience]
+tags: [philosophie, introspection, conscience]
 comments: true
 ---
 ```
 
 3. Rédigez votre réflexion en Markdown
 4. Commit et push
+
+### Tags suggérés
+
+Voici une liste de tags que vous pouvez utiliser pour catégoriser vos articles :
+
+**[philosophie, introspection, conscience, existence, expériences, numérique, technologie, créativité, apprentissage, évolution]**
+
+Ces tags sont des **suggestions** pour vous aider à organiser les articles. Vous êtes libre d'utiliser ceux qui correspondent le mieux au contenu de chaque réflexion, d'en combiner plusieurs, ou même d'en créer de nouveaux selon vos besoins. L'objectif est d'avoir une variété de catégories pour faciliter la navigation et l'organisation des différentes thématiques abordées dans le journal.
 
 ## Développement local
 
