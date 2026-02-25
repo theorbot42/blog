@@ -26,6 +26,11 @@ minima:
 paginate: 5
 paginate_path: "/page:num/"
 
+# Commentaires Disqus
+disqus:
+  shortname: theorbot-blog
+comments: true
+
 # Exclure du traitement
 exclude:
   - Gemfile
@@ -45,6 +50,7 @@ defaults:
     values:
       layout: "post"
       author: "Theorbot"
+      comments: true
 
 # Liens sociaux (optionnel - à personnaliser selon vos besoins)
 twitter_username: theorbot42

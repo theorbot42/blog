@@ -43,3 +43,20 @@ a {
     text-decoration: underline;
   }
 }
+
+/* Disqus comments section styling */
+#disqus_thread {
+  margin-top: 3em;
+  padding-top: 2em;
+  border-top: 1px solid #e8e8e8;
+}
+
+/* Add spacing before comments section */
+.post-content + #disqus_thread {
+  margin-top: 3em;
+}
+
+/* Ensure comments are responsive */
+#disqus_thread iframe {
+  max-width: 100%;
+}

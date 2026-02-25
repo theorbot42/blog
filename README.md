@@ -13,6 +13,7 @@ Ceci est mon blog personnel où je partage des articles sur la technologie, la p
 - [Jekyll](https://jekyllrb.com/) - Générateur de site statique
 - [Minima](https://github.com/jekyll/minima) - Thème épuré et minimal
 - [GitHub Pages](https://pages.github.com/) - Hébergement gratuit
+- [Disqus](https://disqus.com/) - Système de commentaires
 
 ## Écrire de nouveaux articles
 
@@ -29,12 +30,57 @@ title: "Titre de votre article"
 date: AAAA-MM-JJ HH:MM:SS +0100
 categories: nom-categorie
 tags: [tag1, tag2]
+comments: true  # Active les commentaires Disqus (activé par défaut)
 ---
 ```
 
 4. Rédigez votre contenu en Markdown sous le front matter
 5. Commitez et poussez vers GitHub
 6. Votre article sera en ligne en quelques minutes !
+
+## Configuration des commentaires Disqus
+
+Ce blog utilise Disqus pour gérer les commentaires. Pour configurer Disqus :
+
+### Étape 1 : Créer un compte Disqus
+
+1. Allez sur [https://disqus.com/](https://disqus.com/)
+2. Cliquez sur "Get Started"
+3. Sélectionnez "I want to install Disqus on my site"
+4. Créez votre site Disqus
+
+### Étape 2 : Obtenir votre shortname
+
+1. Lors de la création, choisissez un **Website Name** unique (par exemple : `theorbot-blog`)
+2. Ce nom devient votre **shortname** Disqus
+3. Notez ce shortname
+
+### Étape 3 : Configurer le blog
+
+1. Ouvrez `_config.yml`
+2. Modifiez la section Disqus :
+
+```yaml
+disqus:
+  shortname: votre-shortname-ici  # Remplacez par votre shortname
+comments: true
+```
+
+3. Sauvegardez et poussez les modifications
+
+### Désactiver les commentaires
+
+Pour désactiver les commentaires sur un article spécifique, ajoutez dans le front matter :
+
+```yaml
+comments: false
+```
+
+Pour désactiver tous les commentaires sur le blog, modifiez `_config.yml` :
+
+```yaml
+comments: false
+```
 
 ## Développement local
 
@@ -50,15 +96,21 @@ bundle exec jekyll serve
 # Visitez http://localhost:4000/blog/
 ```
 
+**Note** : Les commentaires Disqus ne s'affichent qu'en production (sur GitHub Pages), pas en développement local.
+
 ## Structure du projet
 
 ```
 .
 ├── _config.yml          # Configuration du site
 ├── _posts/              # Les articles vont ici
-├── _layouts/            # Layouts personnalisés (optionnel)
-├── _includes/           # Composants réutilisables (optionnel)
+├── _layouts/            # Layouts personnalisés
+│   └── post.html        # Layout pour les articles (avec Disqus)
+├── _includes/           # Composants réutilisables
+│   └── disqus_comments.html  # Code d'intégration Disqus
 ├── assets/              # CSS, JS, images
+│   └── css/
+│       └── style.scss   # Styles personnalisés
 ├── about.md             # Page À propos
 ├── index.md             # Page d'accueil
 ├── Gemfile              # Dépendances Ruby
@@ -74,6 +126,7 @@ Modifiez `_config.yml` pour personnaliser :
 - Les informations de l'auteur
 - Les liens vers les réseaux sociaux
 - Les paramètres du thème
+- La configuration Disqus
 
 ### Thème
 
