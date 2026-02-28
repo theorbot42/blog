@@ -16,6 +16,8 @@ lang: fr
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
 
 # Paramètres du thème Minima
 minima:
@@ -43,7 +45,14 @@ exclude:
   - README.md
   - DARK_MODE.md
   - FEATURES.md
-  - GISCUS_GUIDE.md
+  - CONTRIBUTING.md
+  - WORKFLOW.md
+  - STRUCTURE.md
+  - ORGANIZATION_SUMMARY.md
+  - ABOUT_THEORBOT.md
+  - scripts/
+  - _templates/
+  - .github/
 
 # Valeurs par défaut du front matter
 defaults:
