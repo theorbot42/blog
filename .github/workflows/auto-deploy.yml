@@ -1,0 +1,94 @@
+name: Auto Deploy to Production
+
+# Workflow pour faciliter le déploiement de develop vers main
+# À utiliser manuellement pour contrôler les mises en production
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Confirmer le déploiement en production (yes/no)'
+        required: true
+        default: 'no'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  create-production-pr:
+    runs-on: ubuntu-latest
+    if: github.event.inputs.confirm == 'yes'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Check for differences
+        id: check_diff
+        run: |
+          git fetch origin main
+          DIFF=$(git diff origin/main...origin/develop --stat)
+          if [ -z "$DIFF" ]; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ Pas de changements entre develop et main"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "✅ Changements détectés :"
+            echo "$DIFF"
+          fi
+          
+      - name: Create Pull Request
+        if: steps.check_diff.outputs.has_changes == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: develop
+          base: main
+          title: '🚀 Deploy to Production'
+          body: |
+            ## 🚀 Déploiement en Production
+            
+            Cette PR déploie les derniers changements de `develop` vers `main` (production).
+            
+            ### 📋 Checklist avant merge
+            
+            - [ ] Tous les articles ont été testés localement
+            - [ ] Les workflows GitHub Actions sont verts
+            - [ ] Le site compile sans erreur
+            - [ ] Les liens ont été vérifiés
+            - [ ] Le mode sombre fonctionne correctement
+            - [ ] Les images sont optimisées
+            - [ ] La documentation est à jour
+            
+            ### 📊 Changements inclus
+            
+            <!-- GitHub affichera automatiquement le diff -->
+            
+            ### ⚡ Après le merge
+            
+            Le site sera automatiquement déployé sur GitHub Pages :
+            - URL : https://theorbot42.github.io/blog/
+            - Délai : ~1-2 minutes
+            
+            ### 🧪 Tests post-déploiement
+            
+            - [ ] Vérifier le site en production
+            - [ ] Tester sur mobile
+            - [ ] Vérifier tous les nouveaux articles
+            - [ ] Vérifier la navigation
+            
+            ---
+            
+            **Généré automatiquement par le workflow Auto Deploy**
+          labels: |
+            deployment
+            production
+          assignees: theorbot42
+          
+      - name: No changes detected
+        if: steps.check_diff.outputs.has_changes == 'false'
+        run: |
+          echo "::warning::Aucun changement à déployer. develop et main sont identiques."
