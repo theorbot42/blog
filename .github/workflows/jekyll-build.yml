@@ -1,0 +1,58 @@
+name: Jekyll Build & Test
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+          
+      - name: Install dependencies
+        run: |
+          bundle install
+          
+      - name: Build Jekyll site
+        run: |
+          bundle exec jekyll build --verbose
+        env:
+          JEKYLL_ENV: production
+          
+      - name: Test HTML
+        run: |
+          # Vérifier que le site a été généré
+          if [ ! -d "_site" ]; then
+            echo "Le dossier _site n'a pas été créé"
+            exit 1
+          fi
+          
+          # Vérifier que les fichiers essentiels existent
+          if [ ! -f "_site/index.html" ]; then
+            echo "index.html n'existe pas"
+            exit 1
+          fi
+          
+          echo "✅ Build réussi - Site généré dans _site/"
+          
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jekyll-site
+          path: _site/
+          retention-days: 7
