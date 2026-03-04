@@ -70,7 +70,7 @@ jobs:
             ### ⚡ Après le merge
             
             Le site sera automatiquement déployé sur GitHub Pages :
-            - URL : https://theorbot42.github.io/blog/
+            - Repository: theorbot42/blog
             - Délai : ~1-2 minutes
             
             ### 🧪 Tests post-déploiement

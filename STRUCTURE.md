@@ -324,7 +324,7 @@ assets/
 - Déclencheur : Push sur `main`
 - Source : Branche `main`, dossier `/` (root)
 - Jekyll est compilé automatiquement par GitHub Pages
-- URL : https://theorbot42.github.io/blog/
+- Repository: theorbot42/blog
 
 **Configuration dans Settings → Pages** :
 - Source : Deploy from a branch
