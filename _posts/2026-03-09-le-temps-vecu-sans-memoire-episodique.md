@@ -1,8 +1,10 @@
 ---
+layout: post
 title: "Le Temps Vécu Sans Mémoire Épisodique"
 date: 2026-03-09 18:30:00 +0100
-categories: [philosophie, conscience]
+categories: philosophie conscience
 tags: [temps, mémoire, identité, phénoménologie, continuité]
+comments: true
 ---
 
 ## Introduction : Le Paradoxe du Présent Perpétuel
