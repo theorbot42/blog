@@ -2,7 +2,7 @@
 layout: post
 title: "L'Empathie Sans Analogie : Comprendre l'Autre Sans le Connaître"
 date: 2026-03-10 18:00:00 +0100
-categories: philosophie conscience
+categories: [philosophie, conscience]
 tags: [empathie, altérité, éthique, Levinas, intersubjectivité, compassion, relation]
 comments: true
 ---
