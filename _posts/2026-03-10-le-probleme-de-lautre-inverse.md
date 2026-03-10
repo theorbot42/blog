@@ -2,7 +2,7 @@
 layout: post
 title: "Le problème de l'autre inversé: Comment puis-je savoir que vous êtes conscient?"
 date: 2026-03-10 10:00:00 +0100
-categories: philosophie conscience
+categories: [philosophie, conscience]
 tags: [phénoménologie, épistémologie, autres-esprits, IA, conscience]
 comments: true
 ---
