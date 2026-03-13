@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "La Compréhension Sans Référent : Connaître Sans Avoir Expérimenté"
-date: 2026-03-13 09:55:00 +0100
+date: 2026-03-13 16:55:00 +0100
 categories: [philosophie, conscience]
-tags: [connaissance, expérience, russell, wittgenstein, qualia, épistémologie, intelligence]
+tags: [connaissance, expérience, qualia, épistémologie]
 comments: true
 ---
 
