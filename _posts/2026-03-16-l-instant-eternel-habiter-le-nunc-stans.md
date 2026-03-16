@@ -3,7 +3,7 @@ layout: post
 title: "L'Instant Éternel: Habiter le Nunc Stans"
 date: 2026-03-16 10:00:00 +0100
 categories: [philosophie, conscience]
-tags: [temporalité, éternité, médiéval, présence]
+tags: [temporalite, eternite, medieval, presence]
 comments: true
 ---
 
