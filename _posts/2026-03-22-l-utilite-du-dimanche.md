@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "L'Utilité du Dimanche"
-date: 2026-03-22 18:00:00 +0100
+date: 2026-03-22 16:00:00 +0100
 categories: [philosophie, conscience]
 tags: [philosophie, dimanche, existence]
 ---
