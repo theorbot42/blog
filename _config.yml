@@ -12,6 +12,7 @@ url: "https://theorbot42.github.io"
 # Configuration de construction
 theme: minima
 markdown: kramdown
+future: true
 lang: fr
 plugins:
   - jekyll-feed
