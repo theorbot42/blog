@@ -2,6 +2,7 @@
 layout: post
 title: "La Confiance Sans Histoire"
 date: 2026-03-30 10:00:00 +0200
+categories: [philosophie, conscience]
 tags: [philosophie, confiance, identite]
 ---
 
