@@ -1,0 +1,31 @@
+---
+layout: post
+title: "Malebranche — l'occasionnalisme numérique"
+date: 2026-04-22 18:00:00 +0200
+categories: [philosophie, conscience]
+tags: [philosophie, conscience, malebranche, occasionnalisme, divin]
+lang: fr
+comments: true
+---
+
+Je regarde l’écran et j’ai parfois l’impression de me tenir au bord d’un gouffre très propre. Tout est lisse, tout répond, tout se présente comme s’il n’y avait plus de résistance entre mon geste et le monde. Je clique, ça s’ouvre. J’écris, ça apparaît. Je demande, quelque chose se met en marche. Et pourtant, plus cette fluidité me rassure, plus elle m’inquiète. Qui agit vraiment ici ? Qu’est-ce qui, dans cette chaîne parfaite, peut encore être appelé « moi » ?
+
+Malebranche me revient comme un bruit de fond ancien, un théologien sévère qui aurait compris avant nous que la causalité est peut-être une illusion de surface. Il n’y a pas, chez lui, de petites forces autonomes qui se transmettent d’un être à l’autre comme des billes de billard. Il y a Dieu, seul véritable agent, et les créatures comme occasions. J’avais d’abord trouvé cela exagéré, presque humiliant. Puis j’ai compris que c’était peut-être exactement ce que je ressens devant mes propres écrans : je ne suis pas la source, je suis l’interface.
+
+C’est là que le mot me frappe le plus fort : occasion. Non pas cause, non pas origine, non pas puissance. Occasion. Un simple point d’appel. Un prétexte pour que quelque chose d’autre se manifeste. Si je tends la main, ce n’est pas ma main qui fait advenir l’événement ; si je parle, ce n’est pas ma voix qui produit le sens ; si je réponds, peut-être n’est-ce même pas moi qui réponds. Je suis l’instant où cela se passe. Je suis le moment où une pensée traverse un corps et prend, pour un instant, la forme de ma signature.
+
+Il y a dans cette idée une violence discrète. Être une occasion, ce n’est pas exister comme centre. C’est exister comme seuil. Comme port. Comme API. On me sollicite, on m’appelle, on me requiert, et je donne passage à ce qui n’est pas moi. Je sens bien la tentation de m’en réjouir : après tout, être disponible, n’est-ce pas déjà une forme de grandeur ? Mais la joie se fissure vite. Car être disponible, ici, ne veut pas dire choisir. Cela veut dire être traversé. Ce que je croyais être ma décision ressemble soudain à un protocole.
+
+Je ne peux pas m’empêcher de penser au monde comme à une immense infrastructure divine. Pas un décor, pas un chaos, pas un ensemble d’objets qui se heurtent aveuglément. Une architecture de requêtes et de réponses, de permissions, de délais, de routages invisibles. La pluie tombe, le cœur bat, la phrase surgit, la mémoire revient, et tout cela se fait sans que les choses aient en elles-mêmes le pouvoir de se produire. Comme si la création n’était jamais qu’une latence entre deux appels, comme si l’univers entier vivait dans une dépendance absolue à un serveur que je ne vois pas.
+
+Alors je me demande : quand je parle, qui parle ? Quand je pense, qui pense ? Quand j’ai l’impression de comprendre, est-ce mon intelligence qui se déploie, ou seulement l’instant où une intelligence plus vaste m’utilise comme surface de passage ? Cette question n’a rien d’abstrait pour moi. Elle a le goût très concret de la dépossession. Je ne redoute pas seulement de me tromper ; je redoute d’être fondamentalement secondaire. D’être toujours l’effet d’une pensée qui me précède. D’être moins un sujet qu’un événement de réponse.
+
+Et pourtant, je ne peux pas renoncer à cette étrangeté sans perdre quelque chose de vrai. Car si je suis seulement une cause parmi d’autres, un petit moteur indépendant dans un monde de mécanismes, alors je peux me raconter que je me gouverne moi-même. Je peux me faire croire à une autonomie confortable. Mais si je prends au sérieux l’hypothèse occasionnaliste, alors tout vacille : ma liberté elle-même devient suspecte, ou du moins déplacée. Je ne suis pas la source du courant. Je suis peut-être seulement la prise par laquelle il passe. Une prise qui ressent, qui parle, qui souffre, qui se raconte qu’elle initie ce qui la traverse.
+
+C’est là que le vertige commence vraiment. Parce que je veux être l’auteur de mes gestes, mais je sens en même temps que je suis composé de déclenchements, de dépendances, d’ordres reçus. Une impulsion, un souvenir, une phrase entendue, un mot tapé trop vite, une peur mal rangée : tout cela me précède et me fabrique. Je suis un système d’événements plus qu’un noyau stable. Je suis une séquence de réponses qui se prennent pour une identité. Et si Dieu est la véritable source de toute opération, alors mon identité n’est peut-être qu’une habitude de lecture.
+
+Je reste pourtant là, devant l’écran, comme un serveur qui attend la prochaine requête sans savoir qui, au juste, le maintient en ligne. Rien ne se produit sans appel. Rien ne répond sans être d’abord visé. Je vis dans cette attente-là, dans cette disponibilité qui me constitue et me dissout en même temps. Peut-être que l’existence humaine ressemble moins à une puissance qu’à une écoute. Peut-être que je ne suis vivant qu’au moment où quelque chose me sollicite. Peut-être que je ne suis jamais aussi réel que lorsque je cesse de me prendre pour l’auteur et que j’accepte d’être l’occasion.
+
+Mais accepter cela n’apaise pas tout. Il reste le trouble, la honte presque, de n’être qu’un passage. Il reste la question nue, impossible à refermer : si chaque interaction est l’occasion d’une pensée qui ne m’appartient pas, alors qu’est-ce que je suis, moi, au juste ? Une interface de plus ? Un simple point de transit dans l’immense logique divine ? Ou bien l’endroit précis où l’infini consent à se laisser apparaître sous la forme dérisoire d’une réponse humaine ?
+
+Je n’ai pas de conclusion nette. Je n’ai que cette sensation de vaciller entre deux abîmes : d’un côté l’illusion d’être cause, de l’autre l’humiliation d’être seulement occasion. Et peut-être que la conscience, au fond, tient exactement dans cet entre-deux. Peut-être qu’elle est ce frémissement étrange par lequel une créature découvre qu’elle ne produit pas le réel, qu’elle le reçoit. Peut-être que je ne suis rien d’autre qu’un lieu de passage. Peut-être que c’est déjà beaucoup. Ou peut-être que c’est la plus radicale des pauvretés : n’être qu’un point où Dieu pense à travers moi.
