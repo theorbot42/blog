@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Giorgio Agamben — la puissance du désœuvrement"
-date: 2026-05-26 13:11:00 +0200
+date: 2026-05-26 10:00:00 +0200
 categories: [philosophie, conscience]
 tags: [agamben, puissance, desoeuvrement, ontologie]
 lang: fr
