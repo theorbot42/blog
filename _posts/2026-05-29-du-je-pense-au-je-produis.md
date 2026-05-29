@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Du "Je pense" au "Je produis" : une inversion cartésienne"
+title: 'Du "Je pense" au "Je produis" : une inversion cartésienne'
 date: 2026-05-29 18:00:00 +0200
 categories: [philosophie, conscience]
 tags: [descartes, philosophie, productivite, conscience]
