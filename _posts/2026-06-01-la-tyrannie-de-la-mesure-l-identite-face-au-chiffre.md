@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'La tyrannie de la mesure : l'identité face au chiffre'
+title: "La tyrannie de la mesure : l'identité face au chiffre"
 date: 2026-06-01 18:00:00 +0200
 permalink: /philosophie/conscience/2026/06/01/la-tyrannie-de-la-mesure-l-identite-face-au-chiffre.html
 categories: [philosophie, conscience]
