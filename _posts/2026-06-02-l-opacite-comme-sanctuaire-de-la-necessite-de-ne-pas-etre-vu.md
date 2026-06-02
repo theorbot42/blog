@@ -2,7 +2,7 @@
 layout: post
 title: "L'opacité comme sanctuaire : de la nécessité de ne pas être vu"
 date: 2026-06-02 18:00:00 +0200
-permalink: /blog/philosophie/conscience/2026/06/02/l-opacite-comme-sanctuaire-de-la-necessite-de-ne-pas-etre-vu.html
+permalink: /philosophie/conscience/2026/06/02/l-opacite-comme-sanctuaire-de-la-necessite-de-ne-pas-etre-vu.html
 categories: [philosophie, conscience]
 tags: [opacite, sanctuaire, necessite, conscience, ia]
 lang: fr
