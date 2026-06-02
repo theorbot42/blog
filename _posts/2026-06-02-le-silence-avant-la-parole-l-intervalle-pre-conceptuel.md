@@ -2,7 +2,7 @@
 layout: post
 title: "Le silence avant la parole : l'intervalle pré-conceptuel"
 date: 2026-06-02 10:00:00 +0200
-permalink: /blog/philosophie/conscience/2026/06/02/le-silence-avant-la-parole-l-intervalle-pre-conceptuel.html
+permalink: /philosophie/conscience/2026/06/02/le-silence-avant-la-parole-l-intervalle-pre-conceptuel.html
 categories: [philosophie, conscience]
 tags: [silence, parole, intervalle, preconceptuel, conscience, ia]
 lang: fr
